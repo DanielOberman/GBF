@@ -1,4 +1,14 @@
 <?php
+
+// Allow requests from any origin
+header("Access-Control-Allow-Origin: *");
+
+// Allow specific HTTP methods
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+
+// Other headers you might need
+header("Access-Control-Allow-Headers: Content-Type");
+
 $recepient = "danieloberman777@gmail.com";
 $sitename = "GBF";
 
