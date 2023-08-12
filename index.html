@@ -32,9 +32,9 @@
 	   	решений.
 		</p>
 	<div class="video-section-wrapper">
-		<video id="video-section-player" autoplay muted loop playsinline webkit-playsinline>
-			<source src="./images/dist/video-section.mp4" type="video/mp4">
-		 </video>
+	   <video id="video-section-player" autoplay muted loop>
+		  <source src="./images/dist/video-section.mp4" type="video/mp4">
+	   </video>
 	</div>
 	<p class="video-section-connect">связаться</p>
 	<div class="video-section-overlay-1">
@@ -461,29 +461,47 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript">
-  function togglePlayPause() {
-    const video = document.getElementById("video-section-player");
-    const form = $("#form");
 
-    if (video.paused || video.ended) {
-      video.play();
-      form.fadeOut(500, () => {
-      })
-    } else {
-      video.pause();
-      form.fadeIn(500, () => {
-        form.css('display', 'flex');
-      });
-    }
+
+function togglePlayPause() {
+  const video = document.getElementById("video-section-player");
+  const form = $("#form");
+
+  if (video.paused || video.ended) {
+    video.play();
+    form.fadeOut(500);
+  } else {
+    video.pause();
+    form.fadeIn(500, function() {
+      form.css('display', 'flex');
+    });
   }
-  $(document).ready(function() {
+}
+
+const startTime = new Date();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let delay = 3000;
+  const vid = document.getElementById("video-section-player");
+  const endTime = new Date();
+  const elapsedTime = endTime - startTime;
+  if (elapsedTime > 4000) {
+    console.log(1);
+    delay = 0;
+  }
+
+  vid.onloadeddata = function() {
     setTimeout(() => {
+      console.log(elapsedTime)
       $('#loader').fadeOut(500, function() {
-        $('body').css('overflow', 'visible'); // Восстановить прокрутку страницы
+        $('body').css('overflow', 'visible'); // Restore page scrolling
       });
     }, 3000);
+  };
+});
 
-
+document.addEventListener("DOMContentLoaded", function () {
     $('.slick-team').slick({
       slidesToShow: 6,
       responsive: [{
