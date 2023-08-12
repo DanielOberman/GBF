@@ -41,7 +41,7 @@
 	   <h2>gbf studio</h2>
 	</div>
 	<div class="video-section-overlay-2">
-	   <a href="./images/dist/gallery-section-image-1.png"  class="video-section-overlay-2-download-button" download>
+	   <a href="./images/src/gallery-section-image-1.png"  class="video-section-overlay-2-download-button" download>
 		  <p>СКАЧАТЬ</p>
 		  <div class="video-section-overlay-2-download-label">
 			 БРИФ
@@ -212,7 +212,7 @@
 	</div>
 	<button id="play-pause-button" class="video-section-control-button" onclick="togglePlayPause()">
 	   <video class="video-section-inside-button" autoplay muted loop playsinline webkit-playsinline>
-		  <source src="./images/dist/video-section-action.mp4" type="video/mp4">
+		  <source src="./images/src/video-section-action.mp4" type="video/mp4">
 	   </video>
 	</button>
 	<form id="form" class="form form-hide" action="https://formsubmit.co/el/curuhu" method="POST">
@@ -228,7 +228,7 @@
 			 </div>
 			 <div class="form-right-side">
 			  <div class="form-right-side-wrapper">
-				  <p><b>Привет, добро пожаловать в GBF Studio.</b>
+				  <p><b>Привет, добро пожаловать в GBF Studio.</b><br>
 					  Если хочешь просчитать свой проект или хочешь что бы мы для тебя его придумали, просто напиши нам!
 				   </p>
 				   <div class="form-area">
@@ -260,7 +260,8 @@
 							</div>
 							<div class="form-area-field">  
 								<label class="form-area-label" for="message">Расскажи о своем проекте</label>  
-								<textarea id="message" name="message" rows="2"></textarea>
+									<textarea  class="form-area-field-desc" id="message" name="message" rows="2"></textarea>
+									<textarea class="form-area-field-mob" id="message" name="message" rows="1"></textarea>
 							</div>
 							<div class="form-area-action">
 								<button type="submit" value="Submit">
@@ -286,15 +287,15 @@
 			 </p>
 		  </div>
 		  <div class="customers-section-slick">
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 1"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 2"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 3"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 1"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 2"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 3"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 1"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 2"></div>
-			 <div class="customers-section-image-container"><img src="./images/dist/imperia.png" alt="Image 3"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 1"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 2"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 3"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 1"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 2"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 3"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 1"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 2"></div>
+			 <div class="customers-section-image-container"><img src="./images/src/imperia.png" alt="Image 3"></div>
 		  </div>
 	   </section>
 	   <section class="gallery-section section-wrapper">
@@ -310,12 +311,12 @@
 		  </div>
 		  <a href="https://www.behance.net/" target="_blank">
 			 <div class="gallery-section-wrapper">
-				<img src="./images/dist/gallery-section-main-image.png" class="gallery-section-main-image" />
+				<img src="./images/src/gallery-section-main-image.png" class="gallery-section-main-image" />
 				<div class="gallery-section-images">
-				   <img src="./images/dist/gallery-section-image-1.png" class="gallery-section-images-image" />
-				   <img src="./images/dist/gallery-section-image-2.png" class="gallery-section-images-image" />
-				   <img src="./images/dist/gallery-section-image-3.png" class="gallery-section-images-image" />
-				   <img src="./images/dist/gallery-section-image-4.png" class="gallery-section-images-image" />
+				   <img src="./images/src/gallery-section-image-1.png" class="gallery-section-images-image" />
+				   <img src="./images/src/gallery-section-image-2.png" class="gallery-section-images-image" />
+				   <img src="./images/src/gallery-section-image-3.png" class="gallery-section-images-image" />
+				   <img src="./images/src/gallery-section-image-4.png" class="gallery-section-images-image" />
 				</div>
 			 </div>
 		  </a>
@@ -370,56 +371,56 @@
 		  </div>
 		  <div class="slick-team">
 			 <div class="section-team-image-container">
-				<img src="./images/dist/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
-				<img src="./images/dist/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">			
+				<img src="./images/src/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
+				<img src="./images/src/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">			
 				<div class="section-team-image-container-name">
 				   <p class="section-team-image-container-name-heading">Имя фамилия</p>
 				   <p class="section-team-image-container-name-subheading">Директор</p>
 				</div>
 			 </div>
 			 <div class="section-team-image-container">
-				<img src="./images/dist/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
-				<img src="./images/dist/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
+				<img src="./images/src/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
+				<img src="./images/src/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
 				<div class="section-team-image-container-name">
 				   <p class="section-team-image-container-name-heading">Имя фамилия</p>
 				   <p class="section-team-image-container-name-subheading">Директор</p>
 				</div>
 			 </div>
 			 <div class="section-team-image-container">
-				<img src="./images/dist/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
-				<img src="./images/dist/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
+				<img src="./images/src/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
+				<img src="./images/src/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
 				<div class="section-team-image-container-name">
 				   <p class="section-team-image-container-name-heading">Имя фамилия</p>
 				   <p class="section-team-image-container-name-subheading">Директор</p>
 				</div>
 			 </div>
 			 <div class="section-team-image-container">
-				<img src="./images/dist/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
-				<img src="./images/dist/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
+				<img src="./images/src/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
+				<img src="./images/src/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
 				<div class="section-team-image-container-name">
 				   <p class="section-team-image-container-name-heading">Имя фамилия</p>
 				   <p class="section-team-image-container-name-subheading">Директор</p>
 				</div>
 			 </div>
 			 <div class="section-team-image-container">
-				<img src="./images/dist/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
-				<img src="./images/dist/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
+				<img src="./images/src/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
+				<img src="./images/src/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
 				<div class="section-team-image-container-name">
 				   <p class="section-team-image-container-name-heading">Имя фамилия</p>
 				   <p class="section-team-image-container-name-subheading">Директор</p>
 				</div>
 			 </div>
 			 <div class="section-team-image-container">
-				<img src="./images/dist/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
-				<img src="./images/dist/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
+				<img src="./images/src/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
+				<img src="./images/src/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
 				<div class="section-team-image-container-name">
 				   <p class="section-team-image-container-name-heading">Имя фамилия</p>
 				   <p class="section-team-image-container-name-subheading">Директор</p>
 				</div>
 			 </div>
 			 <div class="section-team-image-container">
-				<img src="./images/dist/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
-				<img src="./images/dist/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
+				<img src="./images/src/team-desc.png" alt="Image" class="section-team-rounded-image section-team-image-desc">
+				<img src="./images/src/team-mob.png" alt="Image" class="section-team-rounded-image section-team-image-mob">
 				<div class="section-team-image-container-name">
 				   <p class="section-team-image-container-name-heading">Имя фамилия</p>
 				   <p class="section-team-image-container-name-subheading">Директор</p>
