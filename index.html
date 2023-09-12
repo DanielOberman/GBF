@@ -17,7 +17,14 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 	<link rel="stylesheet" href="css/app.min.css">
-
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("NIAzdwl093GFm6AOx");
+       })();
+    </script>
 </head>
 
 <body>
@@ -33,7 +40,7 @@
 		</p>
 	<div class="video-section-wrapper">
 	   <video id="video-section-player" autoplay muted loop playsinline webkit-playsinline>
-		  <source src="https://xgjzloifyvgpbmyonaya.supabase.co/storage/v1/object/public/files/CbpuRJ6TXF/Ju6tKYzNQn" type="video/mp4">
+		  <source src="./images/dist/video-section-2.mp4" type="video/mp4">
 	   </video>
 	</div>
 	<p class="video-section-connect">связаться</p>
@@ -456,7 +463,7 @@
 	<div class="circle"></div>
 	<div class="circle"></div>
   </div>
-
+  
 <script src="js/app.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -480,7 +487,7 @@ function togglePlayPause() {
 
 const startTime = new Date();
 
-
+console.log('new');
 document.addEventListener("DOMContentLoaded", function () {
   let delay = 3000;
   const vid = document.getElementById("video-section-player");
@@ -610,22 +617,36 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
       }
+
       if (!isEmptyRequiredField) {
         const formData = new FormData(form);
 
-        $.ajax({
-          url: "https://formsubmit.co/el/curuhu",
-          type: "POST",
-          data: formData,
-          processData: false,
-          contentType: false,
-          success: function(result) {
-            console.log(result);
-          },
-          error: function(error) {
-            console.error(error);
-          }
-        });
+		const serviceId = 'service_g1ogvsf';
+		const templateId = 'template_8pbetp2';
+
+		console.log(formData);
+
+		emailjs.send(serviceId, templateId, formData).then(() => {
+			document.getElementById('name') = '';
+			document.getElementById('email') = '';
+			document.getElementById('phone') = '';
+			document.getElementByClassName('form-area-field-desc') = '';
+			document.getElementByClassName('form-area-field-mob') = '';
+		});
+
+        // $.ajax({
+        //   url: "https://formsubmit.co/el/curuhu",
+        //   type: "POST",
+        //   data: formData,
+        //   processData: false,
+        //   contentType: false,
+        //   success: function(result) {
+        //     console.log(result);
+        //   },
+        //   error: function(error) {
+        //     console.error(error);
+        //   }
+        // });
       }
     });
   });
