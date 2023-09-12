@@ -498,14 +498,14 @@ document.addEventListener("DOMContentLoaded", function () {
     delay = 0;
   }
 
-  vid.onloadeddata = function() {
-    setTimeout(() => {
-      console.log(elapsedTime)
-      $('#loader').fadeOut(500, function() {
-        $('body').css('overflow', 'visible'); // Restore page scrolling
-      });
-    }, 3000);
-  };
+  // vid.onloadeddata = function() {
+  //   setTimeout(() => {
+  //     console.log(elapsedTime)
+  //     $('#loader').fadeOut(500, function() {
+  //       $('body').css('overflow', 'visible'); // Restore page scrolling
+  //     });
+  //   }, 3000);
+  // };
 });
 
 document.addEventListener("DOMContentLoaded", function () {
