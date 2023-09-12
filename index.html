@@ -625,11 +625,26 @@ document.addEventListener("DOMContentLoaded", function () {
 		const templateId = 'template_8pbetp2';
 
 
+		const descElement = document.getElementsByClassName('form-area-field-desc')[0];
+		const mobElement = document.getElementsByClassName('form-area-field-mob')[0];
+
+		const radioButtons = document.getElementsByName("radioGroup");
+
+		let checkedValue;
+
+		for (const radioButton of radioButtons) {
+			if (radioButton.checked) {
+				checkedValue = radioButton.value;
+				break;
+			}
+		}
+
 		const params = {
 			name: document.getElementById('name').value,
 			email: document.getElementById('email').value,
 			phone: document.getElementById('phone').value,
-			radioGroup: document.getElementsByClassName('form-area-field-desc')[0].value || document.getElementBysClassName('form-area-field-mob')[0].value
+			radioGroup: checkedValue,
+			message: descElement?.value || mobElement?.value,
 		}
 
 		emailjs.send(serviceId, templateId, params).then(() => {
@@ -637,7 +652,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.getElementById('email').value = '';
 			document.getElementById('phone').value = '';
 			document.getElementsByClassName('form-area-field-desc')[0].value = '';
-			document.getElementBysClassName('form-area-field-mob')[0].value = '';
+			document.getElementsByClassName('form-area-field-mob')[0].value = '';
 		});
 
         // $.ajax({
