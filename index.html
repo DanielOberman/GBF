@@ -633,11 +633,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		emailjs.send(serviceId, templateId, params).then(() => {
-			document.getElementById('name') = '';
-			document.getElementById('email') = '';
-			document.getElementById('phone') = '';
-			document.getElementsByClassName('form-area-field-desc') = '';
-			document.getElementsByClassName('form-area-field-mob') = '';
+			document.getElementById('name').value = '';
+			document.getElementById('email').value = '';
+			document.getElementById('phone').value = '';
+			document.getElementsByClassName('form-area-field-desc')[0].value = '';
+			document.getElementBysClassName('form-area-field-mob')[0].value = '';
 		});
 
         // $.ajax({
