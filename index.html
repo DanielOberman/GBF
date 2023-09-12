@@ -629,15 +629,15 @@ document.addEventListener("DOMContentLoaded", function () {
 			name: document.getElementById('name').value,
 			email: document.getElementById('email').value,
 			phone: document.getElementById('phone').value,
-			radioGroup: document.getElementByClassName('form-area-field-desc').value || document.getElementByClassName('form-area-field-mob').value
+			radioGroup: document.getElementsByClassName('form-area-field-desc')[0].value || document.getElementBysClassName('form-area-field-mob')[0].value
 		}
 
 		emailjs.send(serviceId, templateId, params).then(() => {
 			document.getElementById('name') = '';
 			document.getElementById('email') = '';
 			document.getElementById('phone') = '';
-			document.getElementByClassName('form-area-field-desc') = '';
-			document.getElementByClassName('form-area-field-mob') = '';
+			document.getElementsByClassName('form-area-field-desc') = '';
+			document.getElementsByClassName('form-area-field-mob') = '';
 		});
 
         // $.ajax({
