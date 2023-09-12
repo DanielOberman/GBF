@@ -487,7 +487,7 @@ function togglePlayPause() {
 
 const startTime = new Date();
 
-console.log('new');
+
 document.addEventListener("DOMContentLoaded", function () {
   let delay = 3000;
   const vid = document.getElementById("video-section-player");
@@ -498,14 +498,14 @@ document.addEventListener("DOMContentLoaded", function () {
     delay = 0;
   }
 
-  // vid.onloadeddata = function() {
-  //   setTimeout(() => {
-  //     console.log(elapsedTime)
-  //     $('#loader').fadeOut(500, function() {
-  //       $('body').css('overflow', 'visible'); // Restore page scrolling
-  //     });
-  //   }, 3000);
-  // };
+  vid.onloadeddata = function() {
+    setTimeout(() => {
+      console.log(elapsedTime)
+      $('#loader').fadeOut(500, function() {
+        $('body').css('overflow', 'visible'); // Restore page scrolling
+      });
+    }, 3000);
+  };
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -624,9 +624,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		const serviceId = 'service_g1ogvsf';
 		const templateId = 'template_8pbetp2';
 
-		console.log(formData);
 
-		emailjs.send(serviceId, templateId, formData).then(() => {
+		const params = {
+			name: document.getElementById('name').value,
+			email: document.getElementById('email').value,
+			phone: document.getElementById('phone').value,
+			radioGroup: document.getElementByClassName('form-area-field-desc').value || document.getElementByClassName('form-area-field-mob').value
+		}
+
+		emailjs.send(serviceId, templateId, params).then(() => {
 			document.getElementById('name') = '';
 			document.getElementById('email') = '';
 			document.getElementById('phone') = '';
